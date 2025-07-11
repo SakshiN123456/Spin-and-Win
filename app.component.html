@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <a *ngIf="isStartPage" routerLink="/app-login" class="login-button"  >Login</a>
+  <div class="container-fluid custom-gradient-bg" >
+    <div class="mainbox"  *ngIf="isStartPage" >
+      <div id="box" class="box">
+        <div class="box1">
+          <span class="span1" ><b></b></span>
+          <span class="span2" ><b></b></span>
+          <span class="span3" ><b> </b></span>
+          <span class="span4"><b> </b></span>
+        </div>
+        <div class="box2">
+          <span class="span5" ><b> </b></span>
+          <span class="span6" ><b> </b></span>
+          <span class="span7" ><b> </b></span>
+          <span class="span8"><b> </b></span>
+        </div>
+      </div>
+      <button class="spin btn btn-primary" routerLink="/app-login"  *ngIf="isStartPage">SPIN</button>
+    </div>
+  <div class="container-fluid">
+    <router-outlet></router-outlet>
+  </div>
+  <router-outlet></router-outlet>
+</div>

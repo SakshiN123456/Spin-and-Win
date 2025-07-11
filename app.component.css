@@ -1,0 +1,276 @@
+
+
+  .login-button {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #4CAF50, #45a049); /* Green gradient for login */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25px; /* Rounded edges */
+    font-size: 16px; /* Smaller font size */
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+    transition: all 0.3s ease;
+    cursor: pointer;
+   float: right;
+   margin-right: 5px;
+   margin-top: 5px;
+}
+
+.login-button:hover {
+    background: linear-gradient(135deg, #45a049, #4CAF50); 
+    transform: scale(1.05); 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
+}
+.login-button:active {
+    background: linear-gradient(135deg, #388E3C, #45a049); 
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+.custom-gradient-bg {
+  height: 100vh;
+}
+body {
+  font-family: "Open Sans";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background: rgb(60, 60, 242);
+  background: linear-gradient(90deg, rgba(60, 60, 242, 1) 0%, rgba(98, 245, 230, 1) 52%, rgba(60, 60, 242, 1) 100%);
+  background-size: cover;
+}
+
+.mainbox {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center; /* Centers the box horizontally */
+  align-items: center; 
+  position: absolute;
+  left: 39%;
+  transform: translate(-20%,10%);
+  background: rgb(60, 60, 242);
+  background: linear-gradient(90deg, rgba(60, 60, 242, 1) 0%, rgba(98, 245, 230, 1) 52%, rgba(60, 60, 242, 1) 100%);
+}
+.box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  font-weight: bold;
+  border-radius: 50%;
+  border: 10px solid  whitesmoke;
+  overflow: hidden;
+  transition: all ease 5s;
+}
+.mainbox:after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;    /* Top part of the arrow */
+  border-bottom: 10px solid transparent; /* Bottom part of the arrow */
+  border-right: 20px solid blue;         /* Right part of the arrow */
+  right: -20px;                          /* Position the arrow to the right of the wheel */
+  top: 50%;                              /* Vertically center the arrow */
+  transform: translateY(-50%);           /* Adjust for perfect vertical alignment */
+  transition: right 5s ease;             /* Transition for smooth arrow movement */
+}
+
+span {
+  width: 50%;
+  height: 50%;
+  display: inline-block;
+  position: absolute;
+  
+}
+
+.span1 {
+  clip-path: polygon(0 92%, 100% 50%, 0 8%);
+  background-color: #ff0000;
+  top: 120px;
+  left: 0;
+}
+
+.span2 {
+  clip-path: polygon(100% 92%, 0 50%, 100% 8%);
+  background-color: #ffaa00;
+  top: 120px;
+  right: 0;
+}
+
+.span3 {
+  clip-path: polygon(50% 0%, 8% 100%, 92% 100%);
+  background-color: #9400D3;
+  bottom: 0;
+  left: 120px;
+}
+
+.span4 {
+  clip-path: polygon(50% 100%, 92% 0, 8% 0);
+  background-color: #FF4FA1;
+  top: 0;
+  left: 120px;
+}
+
+.span5 {
+  clip-path: polygon(50% 100%, 92% 0, 8% 0);
+  background-color: #FFB6C1;
+  top: 0;
+  left: 120px;
+}
+
+.span6 {
+  clip-path: polygon(0 92%, 100% 50%, 0 8%);
+  background-color: #22ff00;
+  top: 120px;
+  left: 0;
+}
+
+.span7 {
+  clip-path: polygon(50% 0%, 8% 100%, 92% 100%);
+  background-color: #00FFFF;
+  bottom: 0;
+  left: 120px;
+}
+
+.span8 {
+  clip-path: polygon(100% 92%, 0 50%, 100% 8%);
+  background-color: #fffb00;
+  top: 120px;
+  right: 0;
+}
+.span3, .span4 {
+  pointer-events: auto; /* Ensure it's clickable */
+}
+
+.box1 .span3 b {
+  transform: translate(-50%, -50%) rotate(-270deg);
+}
+
+.box1 .span1 b,
+.box2 .span5 b {
+  transform: translate(-50%, -50%) rotate(185deg);
+}
+
+.box2 .span7 b {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.box1 .span4 b,
+.box2 .span8 b {
+  transform: translate(-50%, -50%) rotate(-85deg);
+}
+
+span b {
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box2 {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-135deg);
+}
+
+.spin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  background-color: #001aff;
+  color: #fff;
+  box-shadow: 0 5px 20px #000;
+  font-weight: bold;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 20;
+
+}
+
+.spin:active {
+  width: 70px;
+  height: 70px;
+  font-size: 20px;
+}
+@keyframes animateArrow{
+  50%{
+    right: -40px;
+  }
+}
+.span3, .span4 {
+  pointer-events: auto; /* Ensure it's clickable */
+  z-index: 10;  /* Ensure it's above other elements */
+}
+.span1, .span2 {
+  pointer-events: auto; /* Ensure it's clickable */
+  z-index: 10;  /* Ensure it's above other elements */
+}
+/* Modal Customization */
+/* Style the button container */
+.button-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 15px;
+margin-bottom: 35px;
+position: absolute;
+bottom: 0px;
+left: 10%;
+right: 10%;
+}
+
+/* Style the buttons */
+.button-container .btn {
+background-color: #001aff; /* Same color as spinwheel button */
+color: white;
+font-size: 16px;
+font-weight: bold;
+padding: 10px 30px;
+border: 2px solid #fff; /* White border around the button */
+border-radius: 8px; /* Rounded corners */
+cursor: pointer;
+transition: background-color 0.3s ease, transform 0.3s ease;
+box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+}
+
+/* Button hover effect */
+.button-container .btn:hover {
+background-color: #00aaff; /* Slightly different blue on hover */
+transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Button focus (for accessibility and keyboard navigation) */
+.button-container .btn:focus {
+outline: none;
+border-color: #00aaff; /* Blue border when button is focused */
+}
+
+/* For active button state when clicked */
+.button-container .btn:active {
+transform: scale(0.95); /* Slight shrink when clicked */
+background-color: #005bb5; /* Darker blue when clicked */
+}
+
+/* For displaying buttons in a row */
+@media (max-width: 768px) {
+.button-container {
+  flex-direction: column; /* Stack the buttons on small screens */
+}
+}

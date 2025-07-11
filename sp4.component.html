@@ -1,0 +1,27 @@
+<div class="wrapper">
+    <div id="quiz">
+      <h1>Sports Quiz</h1>
+      
+      <p class="questions">{{ currentQuestion }}</p>
+  
+      <div class="answers">
+        <div *ngFor="let answer of currentAnswers; let i = index" (click)="checkAnswer(i)">
+          {{ answer }}
+        </div>
+      </div>         
+      
+      <div class="checkAnswers" *ngIf="correctAnswers.length">
+        <h3>Correct?</h3>
+        <div class="checker">
+          <div *ngFor="let correct of correctAnswers; let index = index" 
+               [ngClass]="{'correct': correct, 'false': !correct}">
+            {{ index + 1 }}
+          </div>
+        </div>
+      </div>
+      <div *ngIf="isQuizCompleted">
+        <h3>Quiz Completed!</h3>
+        <button routerLink="/app-spinwheel">Go Home</button>
+        </div>
+    </div>
+  </div>
